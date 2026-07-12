@@ -28,14 +28,37 @@ const CursorEffect = () => {
       canvas.height = height;
     };
 
-    const spawnSparks = (x, y) => {
-      // Spawn a few sparks
+    let lastMouse = { x: null, y: null };
+
+    const spawnSparks = (x, y, dx, dy) => {
+      // Calculate length of movement
+      const len = Math.sqrt(dx * dx + dy * dy);
+      if (len === 0) return;
+
+      // Normal vectors (perpendicular to movement direction)
+      const nx1 = -dy / len;
+      const ny1 = dx / len;
+      
+      const nx2 = dy / len;
+      const ny2 = -dx / len;
+
+      // Spawn a few sparks on the sides
       for (let i = 0; i < 2; i++) {
+        // Choose randomly between left or right side
+        const isLeft = Math.random() > 0.5;
+        const baseNx = isLeft ? nx1 : nx2;
+        const baseNy = isLeft ? ny1 : ny2;
+        
+        // Add a bit of randomness to the normal so they scatter a bit
+        const speed = Math.random() * 3 + 2; 
+        const randomSpreadX = (Math.random() - 0.5) * 1.5;
+        const randomSpreadY = (Math.random() - 0.5) * 1.5;
+
         sparks.push({
           x: x,
           y: y,
-          vx: (Math.random() - 0.5) * 6, // Random velocity in X
-          vy: (Math.random() - 0.5) * 6, // Random velocity in Y
+          vx: (baseNx + randomSpreadX) * speed,
+          vy: (baseNy + randomSpreadY) * speed,
           life: 1, // Opacity starts at 1
           size: Math.random() * 2 + 0.5 // Random size
         });
@@ -46,11 +69,23 @@ const CursorEffect = () => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
       mouse.isActive = true;
-      spawnSparks(e.clientX, e.clientY);
+      
+      if (lastMouse.x !== null && lastMouse.y !== null) {
+        const dx = mouse.x - lastMouse.x;
+        const dy = mouse.y - lastMouse.y;
+        if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+          spawnSparks(mouse.x, mouse.y, dx, dy);
+        }
+      }
+      
+      lastMouse.x = mouse.x;
+      lastMouse.y = mouse.y;
     };
 
     const handleMouseOut = () => {
       mouse.isActive = false;
+      lastMouse.x = null;
+      lastMouse.y = null;
     };
 
     const handleTouchMove = (e) => {
@@ -58,12 +93,24 @@ const CursorEffect = () => {
         mouse.x = e.touches[0].clientX;
         mouse.y = e.touches[0].clientY;
         mouse.isActive = true;
-        spawnSparks(mouse.x, mouse.y);
+        
+        if (lastMouse.x !== null && lastMouse.y !== null) {
+          const dx = mouse.x - lastMouse.x;
+          const dy = mouse.y - lastMouse.y;
+          if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+            spawnSparks(mouse.x, mouse.y, dx, dy);
+          }
+        }
+        
+        lastMouse.x = mouse.x;
+        lastMouse.y = mouse.y;
       }
     };
 
     const handleTouchEnd = () => {
       mouse.isActive = false;
+      lastMouse.x = null;
+      lastMouse.y = null;
     };
 
     window.addEventListener('resize', handleResize);

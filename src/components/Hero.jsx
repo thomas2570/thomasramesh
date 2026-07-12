@@ -91,7 +91,7 @@ const Hero = () => {
               <img 
                 src="/profile.jpg" 
                 alt="Thomas Ramesh" 
-                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 ring-4 ring-black/50"
+                className="w-full h-full object-cover rounded-full transition-all duration-500 ring-4 ring-black/50"
               />
             </div>
             {/* Floating badge */}

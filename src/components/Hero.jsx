@@ -86,12 +86,12 @@ const Hero = () => {
           className="order-1 lg:order-2 flex justify-center lg:justify-end"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-white/5 rounded-full blur-2xl -z-10"></div>
-            <div className="w-full h-full p-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-white/5 rounded-full blur-2xl -z-10"></div>
+            <div className="w-full h-full p-3 bg-white/5 border-2 border-white/20 rounded-full backdrop-blur-sm shadow-2xl flex items-center justify-center">
               <img 
                 src="/profile.jpg" 
                 alt="Thomas Ramesh" 
-                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 ring-4 ring-black/50"
               />
             </div>
             {/* Floating badge */}

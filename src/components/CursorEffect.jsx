@@ -56,29 +56,50 @@ const CursorEffect = () => {
         trail[i].y += (trail[i - 1].y - trail[i].y) * 0.45;
       }
 
-      // Draw the glowing snake trail
+      // Draw the sci-fi snake trail
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       
       // Start path for the trail
       for (let i = 1; i < trailLength; i++) {
         const progress = i / trailLength;
-        const thickness = 12 * (1 - progress);
+        const thickness = 3 * (1 - progress); // Made it much thinner
         const opacity = 1 - progress;
         
         ctx.beginPath();
         ctx.moveTo(trail[i - 1].x, trail[i - 1].y);
         ctx.lineTo(trail[i].x, trail[i].y);
         
-        // Using a vibrant neon cyan color for the glow
+        // Vibrant neon cyan color for the core line
         ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
         ctx.lineWidth = thickness;
         
-        // Glow effect
-        ctx.shadowBlur = 20;
+        // Sci-fi Glow effect
+        ctx.shadowBlur = 12;
         ctx.shadowColor = `rgba(0, 212, 255, ${opacity})`;
         
         ctx.stroke();
+      }
+
+      // Add a sci-fi glowing ring that trails slightly behind
+      if (trail[5]) {
+        ctx.beginPath();
+        ctx.arc(trail[5].x, trail[5].y, 12, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(0, 212, 255, 0.6)`;
+        ctx.lineWidth = 1;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = `rgba(0, 212, 255, 0.6)`;
+        ctx.stroke();
+      }
+
+      // Add a bright core dot at the cursor head
+      if (mouse.isActive) {
+        ctx.beginPath();
+        ctx.arc(trail[0].x, trail[0].y, 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, 0.9)`;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = `rgba(0, 212, 255, 1)`;
+        ctx.fill();
       }
 
       animationFrameId = requestAnimationFrame(animate);

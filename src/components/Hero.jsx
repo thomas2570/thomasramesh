@@ -4,7 +4,7 @@ import { ArrowRight, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Hero = () => {
-  const [isColored, setIsColored] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-28 pb-20 px-6 md:px-12 lg:px-24 overflow-hidden relative">
@@ -93,8 +93,11 @@ const Hero = () => {
               <img 
                 src="/profile.jpg" 
                 alt="Thomas Ramesh" 
-                onClick={() => setIsColored(!isColored)}
-                className={`w-full h-full object-cover rounded-full transition-all duration-500 ring-4 ring-black/50 cursor-pointer ${!isColored ? 'grayscale' : ''}`}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                onTouchStart={() => setIsHovered(true)}
+                onTouchEnd={() => setIsHovered(false)}
+                className={`w-full h-full object-cover rounded-full transition-all duration-500 ring-4 ring-black/50 cursor-pointer ${!isHovered ? 'grayscale' : ''}`}
               />
             </div>
             {/* Floating badge */}

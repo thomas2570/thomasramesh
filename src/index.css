@@ -19,6 +19,8 @@
     background-color: var(--primary);
     color: #e4e4e7;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
   }
 
   /* Custom Scrollbar */

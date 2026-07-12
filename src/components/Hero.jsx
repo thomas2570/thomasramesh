@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Rocket } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Hero = () => {
@@ -105,12 +105,16 @@ const Hero = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-black border border-white/10 rounded-xl p-4 shadow-xl backdrop-blur-md"
+              className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-black/80 border border-white/10 rounded-2xl p-4 shadow-[0_0_30px_rgba(0,255,255,0.15)] backdrop-blur-md overflow-hidden group cursor-default"
             >
-              <div className="flex items-center gap-3">
-                <div className="text-3xl font-bold text-white">12+</div>
-                <div className="text-xs text-gray-400 font-mono leading-tight">
-                  GitHub <br/> Repositories
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 border border-white/5 text-cyan-400 group-hover:scale-110 transition-transform duration-500">
+                  <Rocket className="w-6 h-6 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-500" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Startup Builder</span>
+                  <span className="text-xs text-gray-400 font-mono tracking-wider">0 → 1 Mindset</span>
                 </div>
               </div>
             </motion.div>

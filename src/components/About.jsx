@@ -22,10 +22,10 @@ const About = () => {
             
             <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-sans">
               <p>
-                I am a passionate and driven Software Engineer, eager to explore the vast world of technology and innovation. My academic journey is fueled by a profound interest in programming, problem-solving, and cutting-edge technologies like AI, machine learning, and cloud computing.
+                I am a Software Engineer with a strong entrepreneurial mindset, deeply focused on the startup ecosystem. I think like a startup, constantly envisioning and building scalable products from the ground up. I have already successfully contributed to one startup, and I am currently actively building my second.
               </p>
               <p>
-                I've built a strong foundation in data structures, algorithms, and full-stack web development. I love turning complex problems into elegant, optimal solutions, and I'm continuously seeking opportunities to learn, build, and grow as a developer.
+                Rather than just focusing on theoretical problem-solving, I dedicate myself to crafting real-world problem solutions. I specialize in building solid technical foundations, bringing innovative ideas to life, and engineering products that create tangible impact.
               </p>
             </div>
 
@@ -37,8 +37,8 @@ const About = () => {
               </div>
               <div className="p-4 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
                 <Rocket className="w-6 h-6 text-white mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">92%</div>
-                <div className="text-sm text-gray-400">Problem Solving</div>
+                <div className="text-3xl font-bold text-white mb-1">2</div>
+                <div className="text-sm text-gray-400">Startups Built</div>
               </div>
             </div>
           </motion.div>
@@ -60,19 +60,19 @@ const About = () => {
               <ul className="space-y-6">
                 <li className="flex gap-4">
                   <span className="text-white font-mono opacity-50">01</span>
-                  <p className="text-gray-300">Problem Solving (92%)</p>
+                  <p className="text-gray-300">Startup Building & Strategy</p>
                 </li>
                 <li className="flex gap-4">
                   <span className="text-white font-mono opacity-50">02</span>
-                  <p className="text-gray-300">Full-Stack Dev (85%)</p>
+                  <p className="text-gray-300">Product Development</p>
                 </li>
                 <li className="flex gap-4">
                   <span className="text-white font-mono opacity-50">03</span>
-                  <p className="text-gray-300">AI / ML (80%)</p>
+                  <p className="text-gray-300">Real-World Problem Solutions</p>
                 </li>
                 <li className="flex gap-4">
                   <span className="text-white font-mono opacity-50">04</span>
-                  <p className="text-gray-300">Data Structures & Algorithms (78%)</p>
+                  <p className="text-gray-300">Foundation & Architecture</p>
                 </li>
               </ul>
             </div>

@@ -35,7 +35,7 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-all">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-all">
+          <a href="https://x.com/thomasramesh200" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-all">
             <Twitter className="w-5 h-5" />
           </a>
         </div>

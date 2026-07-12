@@ -72,6 +72,9 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaLinkedin className="w-6 h-6" />
             </a>
+            <a href="https://x.com/thomasramesh200" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <FaTwitter className="w-6 h-6" />
+            </a>
           </motion.div>
         </div>
 

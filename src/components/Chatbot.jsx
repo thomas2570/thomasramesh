@@ -37,8 +37,9 @@ const Chatbot = () => {
         skills: "His tech stack includes Java, C++, Python, PHP, React, Next.js, Node.js, Tailwind, MySQL, MongoDB, Supabase, and Git.",
         experience: "He is currently a Core Team Member at The Elites (Oct 2025 - Present), and was previously a Sponsorship Team Member there. He also contributed to GirlScript Summer of Code '25 and volunteered for HackwithIndia.",
         projects: "Some of his featured projects include:\n- Vibly Chat: Real-time chat app with PHP/WebSocket.\n- ProFix: Professional services platform (React/Node).\n- ZPeriod: Interactive web app.\n- TRIC School Management: PHP/MySQL based management system.\n\nYou can ask me for the repository link of any specific project!",
-        contact: "You can reach Thomas at thomasramesh449@gmail.com.\n\nHere are his important links:\n- GitHub: https://github.com/thomas2570\n- LinkedIn: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
+        contact: "You can reach Thomas at thomasramesh449@gmail.com.\n\nHere are his important links:\n- GitHub: https://github.com/thomas2570\n- LinkedIn: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/\n- Twitter: https://x.com/thomasramesh200",
         linkedin: "Here is Thomas's LinkedIn profile: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
+        twitter: "Here is Thomas's Twitter profile: https://x.com/thomasramesh200",
         github: "Here is Thomas's GitHub profile: https://github.com/thomas2570",
         email: "You can email Thomas directly at thomasramesh449@gmail.com",
         resume: "Thomas's resume is available right here on the website! If you're having trouble finding it, you can request a copy directly at thomasramesh449@gmail.com",
@@ -62,6 +63,8 @@ const Chatbot = () => {
         botReply = knowledgeBase.repo_tric;
       } else if (isMatch(['linkedin', 'linked in'])) {
         botReply = knowledgeBase.linkedin;
+      } else if (isMatch(['twitter', 'x'])) {
+        botReply = knowledgeBase.twitter;
       } else if (isMatch(['github', 'git hub'])) {
         botReply = knowledgeBase.github;
       } else if (isMatch(['email', 'e-mail', 'mail'])) {

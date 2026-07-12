@@ -46,7 +46,7 @@ const Skills = () => {
           <div className="absolute inset-20 sm:inset-28 md:inset-36 border-[1px] border-dashed border-white/30 rounded-full" style={{ animation: 'spin 35s linear infinite' }}>
             {/* 0 deg */}
             <div className="absolute top-[0%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-7 h-7" />
@@ -55,7 +55,7 @@ const Skills = () => {
             </div>
             {/* 60 deg */}
             <div className="absolute top-[25%] left-[93.3%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-white to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="w-7 h-7 invert" />
@@ -64,7 +64,7 @@ const Skills = () => {
             </div>
             {/* 120 deg */}
             <div className="absolute top-[75%] left-[93.3%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#38b2ac] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" className="w-7 h-7" />
@@ -73,7 +73,7 @@ const Skills = () => {
             </div>
             {/* 180 deg */}
             <div className="absolute top-[100%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#68a063] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" className="w-7 h-7" />
@@ -82,7 +82,7 @@ const Skills = () => {
             </div>
             {/* 240 deg */}
             <div className="absolute top-[75%] left-[6.7%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#47a248] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-7 h-7" />
@@ -91,7 +91,7 @@ const Skills = () => {
             </div>
             {/* 300 deg */}
             <div className="absolute top-[25%] left-[6.7%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 35s linear infinite reverse' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 35s linear infinite reverse' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#3ecf8e] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_2s_linear_infinite]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" className="w-7 h-7" />
@@ -104,7 +104,7 @@ const Skills = () => {
           <div className="absolute inset-0 sm:inset-4 md:inset-8 border-[1px] border-dashed border-white/30 rounded-full" style={{ animation: 'spin 50s linear infinite reverse' }}>
             {/* 0 deg */}
             <div className="absolute top-[0%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#e76f00] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="w-7 h-7" />
@@ -113,7 +113,7 @@ const Skills = () => {
             </div>
             {/* 60 deg */}
             <div className="absolute top-[25%] left-[93.3%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#00599c] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-7 h-7" />
@@ -122,7 +122,7 @@ const Skills = () => {
             </div>
             {/* 120 deg */}
             <div className="absolute top-[75%] left-[93.3%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#ffde57] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="w-7 h-7" />
@@ -131,7 +131,7 @@ const Skills = () => {
             </div>
             {/* 180 deg */}
             <div className="absolute top-[100%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#777bb4] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" className="w-7 h-7" />
@@ -140,7 +140,7 @@ const Skills = () => {
             </div>
             {/* 240 deg */}
             <div className="absolute top-[75%] left-[6.7%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#00758f] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-7 h-7" />
@@ -149,7 +149,7 @@ const Skills = () => {
             </div>
             {/* 300 deg */}
             <div className="absolute top-[25%] left-[6.7%] -translate-x-1/2 -translate-y-1/2 w-14 h-14">
-               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-lg" style={{ animation: 'spin 50s linear infinite normal' }}>
+               <div className="relative w-full h-full rounded-full flex items-center justify-center p-[1px] overflow-hidden group shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:shadow-[0_0_40px_rgba(0,255,255,0.6)] transition-all duration-300" style={{ animation: 'spin 50s linear infinite normal' }}>
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#f34f29] to-transparent opacity-50 group-hover:opacity-100 animate-[spin_3s_linear_infinite_reverse]" />
                  <div className="relative w-full h-full bg-[#0a0a0a] border border-white/10 rounded-full flex items-center justify-center z-10 group-hover:bg-[#121212] transition-colors">
                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-7 h-7" />

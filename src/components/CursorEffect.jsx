@@ -19,6 +19,7 @@ const CursorEffect = () => {
     // Trail configuration
     const trailLength = 40;
     const trail = Array.from({ length: trailLength }, () => ({ x: width / 2, y: height / 2 }));
+    const sparks = [];
 
     const handleResize = () => {
       width = window.innerWidth;
@@ -27,10 +28,25 @@ const CursorEffect = () => {
       canvas.height = height;
     };
 
+    const spawnSparks = (x, y) => {
+      // Spawn a few sparks
+      for (let i = 0; i < 2; i++) {
+        sparks.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 6, // Random velocity in X
+          vy: (Math.random() - 0.5) * 6, // Random velocity in Y
+          life: 1, // Opacity starts at 1
+          size: Math.random() * 2 + 0.5 // Random size
+        });
+      }
+    };
+
     const handleMouseMove = (e) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
       mouse.isActive = true;
+      spawnSparks(e.clientX, e.clientY);
     };
 
     const handleMouseOut = () => {
@@ -42,6 +58,7 @@ const CursorEffect = () => {
         mouse.x = e.touches[0].clientX;
         mouse.y = e.touches[0].clientY;
         mouse.isActive = true;
+        spawnSparks(mouse.x, mouse.y);
       }
     };
 
@@ -94,6 +111,25 @@ const CursorEffect = () => {
         ctx.shadowColor = `rgba(0, 212, 255, ${opacity})`;
         
         ctx.stroke();
+      }
+
+      // Render and update sparks (stars)
+      for (let i = sparks.length - 1; i >= 0; i--) {
+        const spark = sparks[i];
+        spark.x += spark.vx;
+        spark.y += spark.vy;
+        spark.life -= 0.02; // Fade out speed
+
+        if (spark.life <= 0) {
+          sparks.splice(i, 1);
+        } else {
+          ctx.beginPath();
+          ctx.arc(spark.x, spark.y, spark.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${spark.life})`;
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = `rgba(0, 212, 255, ${spark.life})`;
+          ctx.fill();
+        }
       }
 
       // Add a sci-fi glowing ring that trails slightly behind

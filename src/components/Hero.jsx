@@ -31,7 +31,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-[1.1] text-white"
           >
             Hi, I'm Thomas <br />
-            <span className="text-chrome whitespace-nowrap">Software Engineer</span>
+            <span className="text-chrome">Software Engineer</span>
           </motion.h1>
 
           <motion.p 

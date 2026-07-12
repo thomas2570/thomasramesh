@@ -14,105 +14,76 @@ const CursorEffect = () => {
     canvas.width = width;
     canvas.height = height;
 
-    let particles = [];
-    const mouse = { x: null, y: null, radius: 200 };
+    const mouse = { x: width / 2, y: height / 2, isActive: false };
+    
+    // Trail configuration
+    const trailLength = 40;
+    const trail = Array.from({ length: trailLength }, () => ({ x: width / 2, y: height / 2 }));
 
     const handleResize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
       canvas.width = width;
       canvas.height = height;
-      init();
     };
 
     const handleMouseMove = (e) => {
-      mouse.x = e.x;
-      mouse.y = e.y;
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      mouse.isActive = true;
     };
 
     const handleMouseOut = () => {
-      mouse.x = null;
-      mouse.y = null;
+      mouse.isActive = false;
     };
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseout', handleMouseOut);
 
-    class Particle {
-      constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.size = Math.random() * 2 + 1;
-        this.vx = (Math.random() - 0.5) * 0.8;
-        this.vy = (Math.random() - 0.5) * 0.8;
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fillStyle = 'rgba(70, 130, 180, 0.6)';
-        ctx.fill();
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > width) this.vx = -this.vx;
-        if (this.y < 0 || this.y > height) this.vy = -this.vy;
-      }
-    }
-
-    const init = () => {
-      particles = [];
-      let numberOfParticles = (width * height) / 12000;
-      for (let i = 0; i < numberOfParticles; i++) {
-        particles.push(new Particle());
-      }
-    };
-
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
-      
-      for (let i = 0; i < particles.length; i++) {
-        particles[i].update();
-        particles[i].draw();
-        
-        for (let j = i; j < particles.length; j++) {
-          let dx = particles[i].x - particles[j].x;
-          let dy = particles[i].y - particles[j].y;
-          let distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 120) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(70, 130, 180, ${0.15 - distance/800})`;
-            ctx.lineWidth = 0.8;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
 
-        if (mouse.x != null && mouse.y != null) {
-          let dx = particles[i].x - mouse.x;
-          let dy = particles[i].y - mouse.y;
-          let distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < mouse.radius) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(100, 180, 255, ${0.4 - distance/500})`;
-            ctx.lineWidth = 1.2;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.stroke();
-          }
-        }
+      if (mouse.isActive) {
+        // Smoothly move the head of the snake to the mouse
+        trail[0].x += (mouse.x - trail[0].x) * 0.5;
+        trail[0].y += (mouse.y - trail[0].y) * 0.5;
       }
+
+      // Move the rest of the snake body
+      for (let i = 1; i < trailLength; i++) {
+        trail[i].x += (trail[i - 1].x - trail[i].x) * 0.45;
+        trail[i].y += (trail[i - 1].y - trail[i].y) * 0.45;
+      }
+
+      // Draw the glowing snake trail
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      
+      // Start path for the trail
+      for (let i = 1; i < trailLength; i++) {
+        const progress = i / trailLength;
+        const thickness = 12 * (1 - progress);
+        const opacity = 1 - progress;
+        
+        ctx.beginPath();
+        ctx.moveTo(trail[i - 1].x, trail[i - 1].y);
+        ctx.lineTo(trail[i].x, trail[i].y);
+        
+        // Using a vibrant neon cyan color for the glow
+        ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
+        ctx.lineWidth = thickness;
+        
+        // Glow effect
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = `rgba(0, 212, 255, ${opacity})`;
+        
+        ctx.stroke();
+      }
+
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    init();
     animate();
 
     return () => {

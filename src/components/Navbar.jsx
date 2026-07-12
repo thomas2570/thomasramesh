@@ -29,7 +29,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} onBookMeeting={() => setIsMeetingModalOpen(true)} />
 
       {/* Desktop Full-Width Fixed Navbar */}
       <nav className="hidden md:flex fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-lg border-b border-white/10 px-8 lg:px-16 py-4 justify-between items-center">

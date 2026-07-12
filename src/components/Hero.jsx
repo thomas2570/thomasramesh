@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Hero = () => {
+  const [isColored, setIsColored] = useState(false);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-28 pb-20 px-6 md:px-12 lg:px-24 overflow-hidden relative">
       
@@ -91,7 +93,8 @@ const Hero = () => {
               <img 
                 src="/profile.jpg" 
                 alt="Thomas Ramesh" 
-                className="w-full h-full object-cover rounded-full transition-all duration-500 ring-4 ring-black/50"
+                onClick={() => setIsColored(!isColored)}
+                className={`w-full h-full object-cover rounded-full transition-all duration-500 ring-4 ring-black/50 cursor-pointer ${!isColored ? 'grayscale' : ''}`}
               />
             </div>
             {/* Floating badge */}

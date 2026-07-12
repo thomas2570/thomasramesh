@@ -36,14 +36,41 @@ const Chatbot = () => {
         about: "Thomas is a passionate Software Engineer focused on AI, ML, Cloud Computing, and Full-Stack Web Development. He has strong problem-solving skills (92% rating) and loves turning complex problems into elegant solutions.",
         skills: "His tech stack includes Java, C++, Python, PHP, React, Next.js, Node.js, Tailwind, MySQL, MongoDB, Supabase, and Git.",
         experience: "He is currently a Core Team Member at The Elites (Oct 2025 - Present), and was previously a Sponsorship Team Member there. He also contributed to GirlScript Summer of Code '25 and volunteered for HackwithIndia.",
-        projects: "Some of his featured projects include:\n- Vibly Chat: Real-time chat app with PHP/WebSocket.\n- ProFix: Professional services platform (React/Node).\n- ZPeriod: Interactive web app.\n- TRIC School Management: PHP/MySQL based management system.",
-        contact: "You can reach Thomas at thomasramesh449@gmail.com, or find him on GitHub and LinkedIn. Let's build something exceptional together!",
-        greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him."
+        projects: "Some of his featured projects include:\n- Vibly Chat: Real-time chat app with PHP/WebSocket.\n- ProFix: Professional services platform (React/Node).\n- ZPeriod: Interactive web app.\n- TRIC School Management: PHP/MySQL based management system.\n\nYou can ask me for the repository link of any specific project!",
+        contact: "You can reach Thomas at thomasramesh449@gmail.com.\n\nHere are his important links:\n- GitHub: https://github.com/thomas2570\n- LinkedIn: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
+        linkedin: "Here is Thomas's LinkedIn profile: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
+        github: "Here is Thomas's GitHub profile: https://github.com/thomas2570",
+        email: "You can email Thomas directly at thomasramesh449@gmail.com",
+        resume: "Thomas's resume is available right here on the website! If you're having trouble finding it, you can request a copy directly at thomasramesh449@gmail.com",
+        greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him.",
+        repo_vibly: "Here is the repository link for Vibly Chat: https://github.com/thomas2570/vibly-chat\n\nIt is a real-time chat application built with PHP, MySQL, and WebSockets.",
+        repo_profix: "Here is the repository link for ProFix: https://github.com/thomas2570/ProFix\n\nIt is a comprehensive service booking platform built with React, Node.js, and TailwindCSS.",
+        repo_zperiod: "Here is the repository link for ZPeriod: https://github.com/thomas2570/-Zperiod\n\nIt's an interactive periodic table built with HTML, CSS, and JavaScript.",
+        repo_tric: "Here is the repository link for TRIC School Management: https://github.com/thomas2570/TRIC-School-Management\n\nIt's a complete school management system built with PHP, MySQL, and Bootstrap.",
+        repo_general: "You can find all of Thomas's open-source work and repositories on his GitHub profile here: https://github.com/thomas2570"
       };
 
       const isMatch = (words) => words.some(word => new RegExp(`\\b${word}\\b`, 'i').test(lowerInput));
 
-      if (isMatch(['contact', 'email', 'hire', 'reach', 'connect', 'message'])) {
+      if (isMatch(['vibly'])) {
+        botReply = knowledgeBase.repo_vibly;
+      } else if (isMatch(['profix', 'pro-fix', 'pro fix'])) {
+        botReply = knowledgeBase.repo_profix;
+      } else if (isMatch(['zperiod', 'period', 'periodic'])) {
+        botReply = knowledgeBase.repo_zperiod;
+      } else if (isMatch(['tric', 'school', 'management'])) {
+        botReply = knowledgeBase.repo_tric;
+      } else if (isMatch(['linkedin', 'linked in'])) {
+        botReply = knowledgeBase.linkedin;
+      } else if (isMatch(['github', 'git hub'])) {
+        botReply = knowledgeBase.github;
+      } else if (isMatch(['email', 'e-mail', 'mail'])) {
+        botReply = knowledgeBase.email;
+      } else if (isMatch(['resume', 'cv'])) {
+        botReply = knowledgeBase.resume;
+      } else if (isMatch(['repo', 'repository', 'source', 'code', 'link', 'links'])) {
+        botReply = knowledgeBase.repo_general;
+      } else if (isMatch(['contact', 'hire', 'reach', 'connect', 'message', 'phone', 'number', 'details'])) {
         botReply = knowledgeBase.contact;
       } else if (isMatch(['experience', 'job', 'jobs', 'intern', 'internship', 'role', 'history', 'worked', 'elites', 'hackwithindia', 'girlscript'])) {
         botReply = knowledgeBase.experience;
@@ -98,8 +125,12 @@ const Chatbot = () => {
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${msg.role === 'user' ? 'bg-white/10 text-white' : 'bg-white text-black'}`}>
                     {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                   </div>
-                  <div className={`p-3 rounded-2xl max-w-[80%] text-sm ${msg.role === 'user' ? 'bg-white/10 text-white rounded-tr-none' : 'bg-[#1e1e1e] text-gray-300 rounded-tl-none border border-white/5'}`}>
-                    {msg.content}
+                  <div className={`p-3 rounded-2xl max-w-[80%] text-sm ${msg.role === 'user' ? 'bg-white/10 text-white rounded-tr-none' : 'bg-[#1e1e1e] text-gray-300 rounded-tl-none border border-white/5 whitespace-pre-wrap'}`}>
+                    {msg.role === 'system' ? (
+                      <span dangerouslySetInnerHTML={{ __html: msg.content.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noreferrer" class="text-blue-400 hover:underline">$1</a>') }} />
+                    ) : (
+                      msg.content
+                    )}
                   </div>
                 </div>
               ))}

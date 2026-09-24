@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const coreSkills = [
-    "C", "C++", "Java", "Python", "JavaScript", "PHP", 
-    "HTML5", "CSS3", "React", "Next.js", "Node.js", "Express.js",
-    "Tailwind", "Bootstrap", "MySQL", "MongoDB", "Supabase", 
-    "Docker", "Git", "Linux"
+    "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express.js",
+    "Python", "PHP", "C", "C++", "Tailwind", "PostgreSQL", "MySQL", 
+    "MongoDB", "Supabase", "Docker", "Git", "Linux", "HTML5", "CSS3"
   ];
 
   return (

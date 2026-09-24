@@ -33,32 +33,35 @@ const Chatbot = () => {
       let botReply = "I'm not quite sure about that, but Thomas is always learning new things! Ask me about his 'skills', 'experience', 'projects', or 'contact' info.";
       
       const knowledgeBase = {
-        about: "Thomas is a passionate Software Engineer focused on AI, ML, Cloud Computing, and Full-Stack Web Development. He has strong problem-solving skills (92% rating) and loves turning complex problems into elegant solutions.",
-        skills: "His tech stack includes Java, C++, Python, PHP, React, Next.js, Node.js, Tailwind, MySQL, MongoDB, Supabase, and Git.",
-        experience: "He is currently a Core Team Member at The Elites (Oct 2025 - Present), and was previously a Sponsorship Team Member there. He also contributed to GirlScript Summer of Code '25 and volunteered for HackwithIndia.",
-        projects: "Some of his featured projects include:\n- Vibly Chat: Real-time chat app with PHP/WebSocket.\n- ProFix: Professional services platform (React/Node).\n- ZPeriod: Interactive web app.\n- TRIC School Management: PHP/MySQL based management system.\n\nYou can ask me for the repository link of any specific project!",
+        about: "Thomas is a passionate Software Engineer focused on AI, ML, Cloud Computing, and Full-Stack Web Development. He has strong problem-solving skills and loves turning complex problems into elegant, real-world solutions.",
+        skills: "His tech stack includes JavaScript, TypeScript, C, C++, Python, PHP, React, Next.js, Node.js, Express, PostgreSQL, MySQL, MongoDB, Supabase, Tailwind CSS, Docker, and Git.",
+        experience: "Thomas is the Co-Founder of Gohyred (Aug 2026 - Present), leading product development and architecture. He is also a Core Team Member at The Elites (Oct 2025 - Present), previously served as a Sponsorship Team Member, contributed to GirlScript Summer of Code '25, and volunteered with HackwithIndia.",
+        projects: "Some of his featured projects include:\n- Gohyred: AI-powered career discovery and opportunity aggregation platform (Next.js/PostgreSQL/Redis).\n- Vibly Chat: Real-time encrypted chat application (PHP/WebSocket/Web Crypto).\n- Valenzy: Next-generation interactive chemistry & periodic table platform (React/Tailwind).\n- TRIC School Management: Complete school records and administrative system (PHP/MySQL).\n\nYou can ask me for the details or repository link of any specific project!",
         contact: "You can reach Thomas at thomasramesh449@gmail.com.\n\nHere are his important links:\n- GitHub: https://github.com/thomas2570\n- LinkedIn: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/\n- Twitter: https://x.com/thomasramesh200",
         linkedin: "Here is Thomas's LinkedIn profile: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
         twitter: "Here is Thomas's Twitter profile: https://x.com/thomasramesh200",
         github: "Here is Thomas's GitHub profile: https://github.com/thomas2570",
         email: "You can email Thomas directly at thomasramesh449@gmail.com",
-        resume: "Thomas's resume is available right here on the website! If you're having trouble finding it, you can request a copy directly at thomasramesh449@gmail.com",
+        resume: "Thomas's resume is available right here on the website! You can view or download it directly, or reach out at thomasramesh449@gmail.com",
         greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him.",
-        repo_vibly: "Here is the repository link for Vibly Chat: https://github.com/thomas2570/vibly-chat\n\nIt is a real-time chat application built with PHP, MySQL, and WebSockets.",
+        repo_gohyred: "Gohyred is an AI-powered career discovery and opportunity aggregation platform co-founded by Thomas. Explore it live: https://www.gohyred.com",
+        repo_vibly: "Here is the repository link for Vibly Chat: https://github.com/thomas2570/vibly-chat\n\nLive Demo: https://vibly-chat.vercel.app/\nIt is a real-time messaging application built with PHP, WebSockets, and Web Crypto E2E encryption.",
+        repo_valenzy: "Here is the repository link for Valenzy (formerly ZPeriod): https://github.com/thomas2570/Valenzy\n\nLive Platform: https://valenzy.vercel.app/\nIt's an interactive chemistry platform featuring 118 detailed elements, 3D atomic structures, chemical equation balancing, and molar mass calculators.",
         repo_profix: "Here is the repository link for ProFix: https://github.com/thomas2570/ProFix\n\nIt is a comprehensive service booking platform built with React, Node.js, and TailwindCSS.",
-        repo_zperiod: "Here is the repository link for ZPeriod: https://github.com/thomas2570/-Zperiod\n\nIt's an interactive periodic table built with HTML, CSS, and JavaScript.",
         repo_tric: "Here is the repository link for TRIC School Management: https://github.com/thomas2570/TRIC-School-Management\n\nIt's a complete school management system built with PHP, MySQL, and Bootstrap.",
         repo_general: "You can find all of Thomas's open-source work and repositories on his GitHub profile here: https://github.com/thomas2570"
       };
 
       const isMatch = (words) => words.some(word => new RegExp(`\\b${word}\\b`, 'i').test(lowerInput));
 
-      if (isMatch(['vibly'])) {
+      if (isMatch(['gohyred', 'gohyred.com'])) {
+        botReply = knowledgeBase.repo_gohyred;
+      } else if (isMatch(['vibly'])) {
         botReply = knowledgeBase.repo_vibly;
+      } else if (isMatch(['valenzy', 'zperiod', 'period', 'periodic', 'chemistry'])) {
+        botReply = knowledgeBase.repo_valenzy;
       } else if (isMatch(['profix', 'pro-fix', 'pro fix'])) {
         botReply = knowledgeBase.repo_profix;
-      } else if (isMatch(['zperiod', 'period', 'periodic'])) {
-        botReply = knowledgeBase.repo_zperiod;
       } else if (isMatch(['tric', 'school', 'management'])) {
         botReply = knowledgeBase.repo_tric;
       } else if (isMatch(['linkedin', 'linked in'])) {
@@ -75,11 +78,11 @@ const Chatbot = () => {
         botReply = knowledgeBase.repo_general;
       } else if (isMatch(['contact', 'hire', 'reach', 'connect', 'message', 'phone', 'number', 'details'])) {
         botReply = knowledgeBase.contact;
-      } else if (isMatch(['experience', 'job', 'jobs', 'intern', 'internship', 'role', 'history', 'worked', 'elites', 'hackwithindia', 'girlscript'])) {
+      } else if (isMatch(['experience', 'job', 'jobs', 'intern', 'internship', 'role', 'history', 'worked', 'elites', 'hackwithindia', 'girlscript', 'founder'])) {
         botReply = knowledgeBase.experience;
-      } else if (isMatch(['project', 'projects', 'work', 'works', 'portfolio', 'build', 'built', 'made', 'created', 'vibly', 'profix', 'zperiod', 'tric'])) {
+      } else if (isMatch(['project', 'projects', 'work', 'works', 'portfolio', 'build', 'built', 'made', 'created', 'gohyred', 'vibly', 'valenzy', 'profix', 'zperiod', 'tric'])) {
         botReply = knowledgeBase.projects;
-      } else if (isMatch(['skill', 'skills', 'tech', 'stack', 'technologies', 'tools', 'languages', 'know', 'java', 'react', 'node', 'python', 'php'])) {
+      } else if (isMatch(['skill', 'skills', 'tech', 'stack', 'technologies', 'tools', 'languages', 'know', 'java', 'typescript', 'react', 'node', 'python', 'php', 'postgres'])) {
         botReply = knowledgeBase.skills;
       } else if (isMatch(['about', 'who', 'background', 'bio', 'intro', 'yourself', 'thomas', 'education', 'degree'])) {
         botReply = knowledgeBase.about;

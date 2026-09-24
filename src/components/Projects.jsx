@@ -6,28 +6,27 @@ import { FaGithub as Github } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
+      title: "Gohyred",
+      desc: "An AI-powered career discovery and opportunity aggregation platform featuring real-time dashboarding, PDF resume parsing, and intelligent candidate-job matching.",
+      tech: ["Next.js", "PostgreSQL", "Redis", "BullMQ", "Puppeteer"],
+      live: "https://www.gohyred.com",
+      image: "/gohyred.png"
+    },
+    {
       title: "Vibly Chat",
-      desc: "A real-time chat application built with PHP. Features include message routing, user authentication, and real-time backend functionality.",
-      tech: ["PHP", "MySQL", "WebSocket"],
+      desc: "A secure, real-time messaging application engineered with end-to-end encryption via Web Crypto API (ECDH / AES-256-GCM), Pusher WebSockets, and a serverless PHP backend.",
+      tech: ["PHP", "WebSocket", "Web Crypto", "Vanilla CSS"],
       github: "https://github.com/thomas2570/vibly-chat",
       live: "https://vibly-chat.vercel.app/",
       image: "/vibly.png"
     },
     {
-      title: "ProFix",
-      desc: "A comprehensive platform designed to streamline professional services and workflow management.",
-      tech: ["React", "Node.js", "TailwindCSS"],
-      github: "https://github.com/thomas2570/ProFix",
-      live: "https://pro-fix-two.vercel.app",
-      image: "/profix.png"
-    },
-    {
-      title: "ZPeriod",
-      desc: "An interactive web application showcasing dynamic user input handling, real-time output capabilities, and clean UI design.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/thomas2570/-Zperiod",
-      live: "https://zperiod.vercel.app/",
-      image: "/zperiod.png"
+      title: "Valenzy",
+      desc: "An interactive chemistry learning platform featuring 118 detailed elements, 3D atomic structures, dynamic equation balancing, and molar mass calculators.",
+      tech: ["React", "TailwindCSS", "Vite", "JavaScript"],
+      github: "https://github.com/thomas2570/Valenzy",
+      live: "https://valenzy.vercel.app/",
+      image: "/valenzy.png"
     },
     {
       title: "TRIC School Management",
@@ -68,7 +67,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={`${project.title} UI`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" 
                 />
                 
                 {/* Overlay Links */}

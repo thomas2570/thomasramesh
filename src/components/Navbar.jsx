@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
           
           <a 
-            href="/Thomas.pdf?v=3" 
+            href="/Thomas.pdf?v=4" 
             target="_blank" 
             rel="noreferrer" 
             className="text-[14px] font-medium text-gray-300 hover:text-white transition-colors"

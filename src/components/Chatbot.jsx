@@ -42,7 +42,7 @@ const Chatbot = () => {
         twitter: "Here is Thomas's Twitter profile: https://x.com/thomasramesh200",
         github: "Here is Thomas's GitHub profile: https://github.com/thomas2570",
         email: "You can email Thomas directly at thomasramesh449@gmail.com",
-        resume: "Thomas's resume is available right here on the website! You can view or download it directly at /Thomas.pdf, view it on Google Drive (https://drive.google.com/file/d/1xqWmKYH1vCk0UAKSzh7x3aszcdCN1pAY/view?usp=sharing), or reach out at thomasramesh449@gmail.com",
+        resume: "Thomas's resume is available on Google Drive! You can view or download it here: https://drive.google.com/file/d/1LYUT-8Dgk1KMxlYKOcQttBFqk31UV2v6/view?usp=sharing — or reach out at thomasramesh449@gmail.com",
         greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him.",
         repo_gohyred: "Gohyred is an AI-powered career discovery and opportunity aggregation platform co-founded by Thomas. Explore it live: https://www.gohyred.com",
         repo_vibly: "Here is the repository link for Vibly Chat: https://github.com/thomas2570/vibly-chat\n\nLive Demo: https://vibly-chat.vercel.app/\nIt is a real-time messaging application built with PHP, WebSockets, and Web Crypto E2E encryption.",

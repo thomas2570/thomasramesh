@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, onClose, onBookMeeting }) => {
                 Book a Meeting
               </button>
               <a 
-                href="/Thomas.pdf?v=4" 
+                href="https://drive.google.com/file/d/1LYUT-8Dgk1KMxlYKOcQttBFqk31UV2v6/view?usp=sharing" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="w-full bg-white/5 text-white font-medium text-[15px] py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"

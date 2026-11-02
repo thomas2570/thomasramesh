@@ -56,7 +56,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             
-            <a href="/Thomas.pdf?v=4" target="_blank" className="group flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium text-white bg-white/5 border border-white/10 rounded-full transition-all hover:bg-white/10">
+            <a href="https://drive.google.com/file/d/1LYUT-8Dgk1KMxlYKOcQttBFqk31UV2v6/view?usp=sharing" target="_blank" rel="noreferrer" className="group flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium text-white bg-white/5 border border-white/10 rounded-full transition-all hover:bg-white/10">
               Resume
               <Download className="w-4 h-4" />
             </a>

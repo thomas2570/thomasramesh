@@ -13,27 +13,34 @@ const Experience = () => {
     },
     {
       id: "02",
+      role: "Full Stack Developer",
+      company: "Nexvia Technologies",
+      period: "Oct 2026 - Nov 2026",
+      desc: "Contributed as a Full Stack Developer engineering scalable web applications, designing performant backend services, integrating database systems, and building responsive client-facing interfaces."
+    },
+    {
+      id: "03",
       role: "Core Team Member",
       company: "The Elites",
       period: "Oct 2025 - Present",
       desc: "Working closely with the core team on initiatives and technical projects, contributing as a full-stack developer."
     },
     {
-      id: "03",
+      id: "04",
       role: "Sponsorship Team Member",
       company: "The Elites",
       period: "Mar 2025 - Oct 2025",
       desc: "Led sponsorship acquisition efforts, collaborating with companies to support community initiatives."
     },
     {
-      id: "04",
+      id: "05",
       role: "Contributor (Trainee)",
       company: "GirlScript Summer of Code '25",
       period: "Jul 2025 - Oct 2025",
       desc: "Actively contributed to open-source projects, enhancing skills in collaborative development and version control."
     },
     {
-      id: "05",
+      id: "06",
       role: "Public Relations Volunteer",
       company: "HackwithIndia",
       period: "Dec 2024 - Oct 2025",

@@ -13,28 +13,28 @@ const Projects = () => {
       image: "/gohyred.png"
     },
     {
+      title: "EduFlow Academy",
+      desc: "A modern, production-grade Learning Management System (LMS) built with the MERN stack. It features real-time WebRTC virtual classrooms, adaptive video learning, automated curriculum assessments, cryptographic SHA-256 verifiable PDF certifications, and an instructor studio with monetization analytics.",
+      tech: ["React", "Node.js", "MongoDB", "WebRTC", "Socket.IO", "Tailwind CSS"],
+      github: "https://github.com/thomas2570/fullstack-internship-projects/tree/main/FS-03",
+      live: "https://eduflowacademy.vercel.app",
+      image: "/eduflow.jpg"
+    },
+    {
+      title: "AgilePlatform — Multi-Tenant SaaS",
+      desc: "An enterprise-grade, multi-tenant agile project management and issue-tracking platform built for high-performance software engineering teams. Designed with strict cryptographic tenant isolation, customizable Kanban boards, sprint lifecycle management, burndown analytics, tamper-proof audit trails, outbound HMAC-SHA256 signed webhooks, automated transactional email invitations, and a dual-currency (USD $ / INR ₹) Stripe billing engine.",
+      tech: ["Python", "Django", "React", "PostgreSQL", "Celery", "Stripe"],
+      github: "https://github.com/thomas2570/fullstack-internship-projects/tree/main/FS-04",
+      live: "https://agileplatform-snowy.vercel.app/",
+      image: "/agileplatform.png"
+    },
+    {
       title: "Vibly Chat",
       desc: "A secure, real-time messaging application engineered with end-to-end encryption via Web Crypto API (ECDH / AES-256-GCM), Pusher WebSockets, and a serverless PHP backend.",
       tech: ["PHP", "WebSocket", "Web Crypto", "Vanilla CSS"],
       github: "https://github.com/thomas2570/vibly-chat",
       live: "https://vibly-chat.vercel.app/",
       image: "/vibly.png"
-    },
-    {
-      title: "Valenzy",
-      desc: "An interactive chemistry learning platform featuring 118 detailed elements, 3D atomic structures, dynamic equation balancing, and molar mass calculators.",
-      tech: ["React", "TailwindCSS", "Vite", "JavaScript"],
-      github: "https://github.com/thomas2570/Valenzy",
-      live: "https://valenzy.vercel.app/",
-      image: "/valenzy.png"
-    },
-    {
-      title: "TRIC School Management",
-      desc: "A robust school management system for handling student records, attendance, and administrative tasks efficiently.",
-      tech: ["PHP", "MySQL", "Bootstrap"],
-      github: "https://github.com/thomas2570/TRIC-School-Management",
-      live: "https://tric-school-management.vercel.app",
-      image: "/tric.png"
     }
   ];
 

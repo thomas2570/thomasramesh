@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ap-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e17" />
+      <stop offset="50%" stop-color="#111322" />
+      <stop offset="100%" stop-color="#07080f" />
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="amber-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="ap-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a2e" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#111324" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="ap-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#ap-bg)" />
+
+  <!-- Subtle grid lines -->
+  <path d="M0,60 H800 M0,120 H800 M0,180 H800 M0,240 H800 M0,300 H800 M0,360 H800 M0,420 H800" stroke="#1f2338" stroke-width="0.7" opacity="0.3" />
+  <path d="M100,0 V480 M200,0 V480 M300,0 V480 M400,0 V480 M500,0 V480 M600,0 V480 M700,0 V480" stroke="#1f2338" stroke-width="0.7" opacity="0.3" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="240" cy="120" r="150" fill="#6366f1" opacity="0.08" filter="blur(50px)" />
+  <circle cx="680" cy="360" r="140" fill="#8b5cf6" opacity="0.08" filter="blur(45px)" />
+
+  <!-- Top App Navigation Bar -->
+  <rect x="40" y="32" width="720" height="46" rx="10" fill="#131525" stroke="#232742" stroke-width="1.2" />
+  <!-- Window dots -->
+  <circle cx="65" cy="55" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="82" cy="55" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="99" cy="55" r="5" fill="#10b981" opacity="0.8" />
+
+  <!-- Logo and Brand -->
+  <rect x="125" y="45" width="20" height="20" rx="5" fill="url(#purple-glow)" />
+  <path d="M130,55 L135,48 L140,55 L135,52 Z" fill="#ffffff" />
+  <text x="155" y="59" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="14" letter-spacing="0.5">AgilePlatform</text>
+
+  <!-- Multi-tenant tag -->
+  <rect x="275" y="46" width="130" height="20" rx="10" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-opacity="0.35" stroke-width="1" />
+  <text x="285" y="60" fill="#a5b4fc" font-family="sans-serif" font-size="10" font-weight="600">Tenant: org_apex_90</text>
+
+  <!-- Stripe billing badge -->
+  <rect x="415" y="46" width="125" height="20" rx="10" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.3" stroke-width="1" />
+  <text x="425" y="60" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">Stripe USD/INR Active</text>
+
+  <!-- Right status -->
+  <rect x="635" y="46" width="105" height="20" rx="6" fill="#1e213a" />
+  <text x="645" y="60" fill="#cbd5e1" font-family="sans-serif" font-size="10">Celery: Idle (0)</text>
+
+  <!-- Main Kanban Board Section -->
+  <g filter="url(#ap-shadow)">
+    <!-- Column 1: Backlog -->
+    <rect x="40" y="96" width="225" height="340" rx="12" fill="url(#ap-card)" stroke="#232742" stroke-width="1.2" />
+    <rect x="40" y="96" width="225" height="38" rx="12" fill="#15182a" />
+    <circle cx="56" cy="115" r="4" fill="#94a3b8" />
+    <text x="68" y="120" fill="#e2e8f0" font-family="sans-serif" font-weight="700" font-size="12">BACKLOG</text>
+    <rect x="220" y="106" width="24" height="18" rx="9" fill="#1e223c" />
+    <text x="228" y="119" fill="#94a3b8" font-family="sans-serif" font-size="10">3</text>
+
+    <!-- Card 1 -->
+    <rect x="52" y="148" width="201" height="80" rx="8" fill="#1e2139" stroke="#2d3254" stroke-width="1" />
+    <rect x="62" y="158" width="58" height="16" rx="4" fill="#ef4444" fill-opacity="0.2" />
+    <text x="68" y="170" fill="#f87171" font-family="sans-serif" font-size="9" font-weight="700">HIGH PRIORITY</text>
+    <text x="62" y="192" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="11">Cryptographic Isolation</text>
+    <text x="62" y="210" fill="#94a3b8" font-family="sans-serif" font-size="9">Tenant schema DB encryption</text>
+
+    <!-- Card 2 -->
+    <rect x="52" y="238" width="201" height="74" rx="8" fill="#1e2139" stroke="#2d3254" stroke-width="1" />
+    <rect x="62" y="248" width="55" height="16" rx="4" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="68" y="260" fill="#fbbf24" font-family="sans-serif" font-size="9" font-weight="700">MEDIUM</text>
+    <text x="62" y="280" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="11">HMAC Webhook Signer</text>
+    <text x="62" y="296" fill="#94a3b8" font-family="sans-serif" font-size="9">SHA-256 header verification</text>
+
+    <!-- Card 3 Mini -->
+    <rect x="52" y="322" width="201" height="52" rx="8" fill="#1e2139" stroke="#2d3254" stroke-width="1" />
+    <text x="62" y="344" fill="#cbd5e1" font-family="sans-serif" font-size="11">Audit Trail Export</text>
+    <text x="62" y="360" fill="#64748b" font-family="sans-serif" font-size="9">PostgreSQL jsonb ledger</text>
+
+
+    <!-- Column 2: In Progress -->
+    <rect x="287" y="96" width="225" height="340" rx="12" fill="url(#ap-card)" stroke="#232742" stroke-width="1.2" />
+    <rect x="287" y="96" width="225" height="38" rx="12" fill="#15182a" />
+    <circle cx="303" cy="115" r="4" fill="#6366f1" />
+    <text x="315" y="120" fill="#e2e8f0" font-family="sans-serif" font-weight="700" font-size="12">IN PROGRESS</text>
+    <rect x="467" y="106" width="24" height="18" rx="9" fill="#1e223c" />
+    <text x="475" y="119" fill="#a5b4fc" font-family="sans-serif" font-size="10">2</text>
+
+    <!-- Card active 1 -->
+    <rect x="299" y="148" width="201" height="106" rx="8" fill="#1f2340" stroke="#6366f1" stroke-width="1.2" />
+    <rect x="309" y="158" width="70" height="16" rx="4" fill="#6366f1" fill-opacity="0.25" />
+    <text x="315" y="170" fill="#c7d2fe" font-family="sans-serif" font-size="9" font-weight="700">SPRINT ACTIVE</text>
+    <text x="309" y="192" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="11">Dual-Currency Stripe Billing</text>
+    <text x="309" y="210" fill="#94a3b8" font-family="sans-serif" font-size="9">USD $ and INR ₹ dynamic tiers</text>
+
+    <!-- Progress bar -->
+    <rect x="309" y="226" width="181" height="5" rx="2.5" fill="#2d3254" />
+    <rect x="309" y="226" width="135" height="5" rx="2.5" fill="url(#purple-glow)" />
+
+    <text x="309" y="244" fill="#6366f1" font-family="sans-serif" font-size="9" font-weight="bold">Django REST · Celery</text>
+
+    <!-- Card active 2 -->
+    <rect x="299" y="264" width="201" height="80" rx="8" fill="#1e2139" stroke="#2d3254" stroke-width="1" />
+    <text x="309" y="286" fill="#ffffff" font-family="sans-serif" font-weight="600" font-size="11">Burndown Engine</text>
+    <text x="309" y="302" fill="#94a3b8" font-family="sans-serif" font-size="9">Automated velocity calculations</text>
+    
+    <!-- Mini sparkline chart -->
+    <polyline points="309,330 340,324 370,326 400,318 430,314 470,305" fill="none" stroke="#a855f7" stroke-width="2" />
+
+
+    <!-- Column 3: Burndown Analytics & Completed -->
+    <rect x="535" y="96" width="225" height="340" rx="12" fill="url(#ap-card)" stroke="#232742" stroke-width="1.2" />
+    <rect x="535" y="96" width="225" height="38" rx="12" fill="#15182a" />
+    <circle cx="551" cy="115" r="4" fill="#10b981" />
+    <text x="563" y="120" fill="#e2e8f0" font-family="sans-serif" font-weight="700" font-size="12">COMPLETED / METRICS</text>
+
+    <!-- Metrics box -->
+    <rect x="547" y="148" width="201" height="115" rx="8" fill="#14172a" stroke="#252b48" stroke-width="1" />
+    <text x="559" y="170" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold">SPRINT BURNDOWN</text>
+    <text x="690" y="170" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="bold">-28% pts</text>
+
+    <!-- Burndown chart -->
+    <line x1="559" y1="225" x2="736" y2="225" stroke="#2d3254" stroke-width="1" />
+    <line x1="559" y1="185" x2="736" y2="225" stroke="#64748b" stroke-dasharray="3,3" stroke-width="1.2" />
+    <polyline points="559,185 590,192 630,200 670,208 710,218 736,220" fill="none" stroke="#10b981" stroke-width="2" />
+
+    <text x="559" y="246" fill="#cbd5e1" font-family="sans-serif" font-size="9">Day 1 to Day 14 Velocity Tracking</text>
+
+    <!-- Tenant Isolation status -->
+    <rect x="547" y="273" width="201" height="96" rx="8" fill="#14172a" stroke="#252b48" stroke-width="1" />
+    <text x="559" y="295" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="11">Multi-Tenant Architecture</text>
+    <text x="559" y="312" fill="#94a3b8" font-family="sans-serif" font-size="9">Zero cross-tenant data leakage</text>
+    <rect x="559" y="325" width="82" height="20" rx="4" fill="#10b981" fill-opacity="0.15" />
+    <text x="567" y="339" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="bold">✓ Encrypted</text>
+    <rect x="647" y="325" width="85" height="20" rx="4" fill="#6366f1" fill-opacity="0.15" />
+    <text x="655" y="339" fill="#a5b4fc" font-family="sans-serif" font-size="10" font-weight="bold">Django REST</text>
+  </g>
+</svg>

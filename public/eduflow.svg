@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="emerald-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141e33" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#bg-grad)" />
+
+  <!-- Subtle Grid Lines -->
+  <path d="M0,60 H800 M0,120 H800 M0,180 H800 M0,240 H800 M0,300 H800 M0,360 H800 M0,420 H800" stroke="#1e293b" stroke-width="0.7" opacity="0.3" />
+  <path d="M100,0 V480 M200,0 V480 M300,0 V480 M400,0 V480 M500,0 V480 M600,0 V480 M700,0 V480" stroke="#1e293b" stroke-width="0.7" opacity="0.3" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="200" cy="140" r="140" fill="#06b6d4" opacity="0.08" filter="blur(40px)" />
+  <circle cx="620" cy="300" r="160" fill="#3b82f6" opacity="0.08" filter="blur(50px)" />
+
+  <!-- Top App Navigation Bar -->
+  <rect x="40" y="32" width="720" height="46" rx="10" fill="#111827" stroke="#1f293d" stroke-width="1.2" />
+  <!-- Window dots -->
+  <circle cx="65" cy="55" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="82" cy="55" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="99" cy="55" r="5" fill="#10b981" opacity="0.8" />
+
+  <!-- Logo and Brand -->
+  <rect x="125" y="45" width="20" height="20" rx="5" fill="url(#cyan-glow)" />
+  <path d="M130,58 L135,49 L140,58 Z" fill="#ffffff" />
+  <text x="155" y="59" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" letter-spacing="0.5">EduFlow Academy</text>
+
+  <!-- Status badges -->
+  <rect x="300" y="46" width="108" height="20" rx="10" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1" />
+  <circle cx="312" cy="56" r="3.5" fill="#06b6d4" />
+  <text x="322" y="60" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">WebRTC Live</text>
+
+  <rect x="418" y="46" width="115" height="20" rx="10" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.3" stroke-width="1" />
+  <text x="428" y="60" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">SHA-256 Verifiable</text>
+
+  <!-- Right user badge -->
+  <circle cx="725" cy="55" r="11" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+  <text x="720" y="59" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="bold">EA</text>
+
+  <!-- Left Main Video / Classroom Area -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="96" width="460" height="340" rx="14" fill="url(#card-grad)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Video Player Simulation -->
+    <rect x="60" y="116" width="420" height="230" rx="10" fill="#090d16" stroke="#1e293d" stroke-width="1" />
+    
+    <!-- Live Classroom Stream Canvas Mockup -->
+    <circle cx="270" cy="205" r="36" fill="url(#cyan-glow)" opacity="0.85" />
+    <polygon points="265,195 282,205 265,215" fill="#ffffff" />
+    
+    <!-- Realtime indicators -->
+    <rect x="75" y="130" width="70" height="22" rx="4" fill="#dc2626" fill-opacity="0.9" />
+    <circle cx="86" cy="141" r="3" fill="#ffffff" />
+    <text x="95" y="145" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">● LIVE</text>
+    
+    <rect x="155" y="130" width="85" height="22" rx="4" fill="#000000" fill-opacity="0.6" stroke="#334155" stroke-width="0.8" />
+    <text x="165" y="145" fill="#94a3b8" font-family="sans-serif" font-size="10">1080p 60fps</text>
+
+    <!-- Audio waveform -->
+    <g transform="translate(370, 132)">
+      <line x1="0" y1="12" x2="0" y2="4" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="6" y1="15" x2="6" y2="1" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="12" y1="17" x2="12" y2="0" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="18" y1="13" x2="18" y2="3" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="24" y1="16" x2="24" y2="2" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Classroom controls bar -->
+    <rect x="60" y="310" width="420" height="36" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
+    <rect x="76" y="325" width="220" height="5" rx="2.5" fill="#334155" />
+    <rect x="76" y="325" width="140" height="5" rx="2.5" fill="url(#cyan-glow)" />
+    <circle cx="216" cy="327.5" r="5" fill="#ffffff" />
+    <text x="310" y="330" fill="#94a3b8" font-family="sans-serif" font-size="10">42:18 / 1:20:00</text>
+
+    <!-- Bottom Stream Features -->
+    <text x="62" y="378" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="15">Full-Stack MERN & WebRTC Architecture</text>
+    <text x="62" y="398" fill="#94a3b8" font-family="sans-serif" font-size="12">Interactive curriculum assessments & verifiable certificate ledger</text>
+
+    <rect x="62" y="410" width="82" height="18" rx="4" fill="#1e293b" />
+    <text x="70" y="423" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="600">Socket.IO</text>
+
+    <rect x="152" y="410" width="86" height="18" rx="4" fill="#1e293b" />
+    <text x="160" y="423" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">MongoDB</text>
+
+    <rect x="246" y="410" width="100" height="18" rx="4" fill="#1e293b" />
+    <text x="254" y="423" fill="#f472b6" font-family="sans-serif" font-size="10" font-weight="600">Instructor Studio</text>
+  </g>
+
+  <!-- Right Sidebar: Interactive Chat & Certificate Verification -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="96" width="240" height="340" rx="14" fill="url(#card-grad)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Sidebar Header -->
+    <rect x="520" y="96" width="240" height="42" rx="14" fill="#111827" />
+    <text x="538" y="122" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="13">Classroom Chat</text>
+    <circle cx="735" cy="118" r="4" fill="#10b981" />
+
+    <!-- Chat Bubbles -->
+    <rect x="536" y="150" width="160" height="34" rx="8" fill="#1e293b" />
+    <text x="546" y="166" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="bold">Alex (Student)</text>
+    <text x="546" y="178" fill="#e2e8f0" font-family="sans-serif" font-size="10">WebRTC connection is clear!</text>
+
+    <rect x="556" y="194" width="190" height="42" rx="8" fill="#0369a1" fill-opacity="0.3" stroke="#0284c7" stroke-width="0.8" />
+    <text x="566" y="210" fill="#7dd3fc" font-family="sans-serif" font-size="10" font-weight="bold">Instructor (Host)</text>
+    <text x="566" y="224" fill="#f8fafc" font-family="sans-serif" font-size="10">Assessment #3 is now open.</text>
+
+    <!-- Certificate preview card -->
+    <rect x="536" y="254" width="208" height="120" rx="8" fill="#090d16" stroke="#334155" stroke-width="1" />
+    <rect x="546" y="264" width="188" height="4" fill="url(#emerald-glow)" rx="2" />
+    <text x="546" y="284" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="11">Cryptographic Certificate</text>
+    <text x="546" y="299" fill="#94a3b8" font-family="sans-serif" font-size="9">SHA-256 Checksum:</text>
+    <text x="546" y="313" fill="#34d399" font-family="monospace" font-size="9">e3b0c44298fc1c149afb...</text>
+
+    <rect x="546" y="327" width="90" height="22" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="0.8" />
+    <text x="558" y="342" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">✓ Verified PDF</text>
+
+    <!-- Bottom Input mock -->
+    <rect x="536" y="388" width="208" height="32" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="548" y="408" fill="#64748b" font-family="sans-serif" font-size="10">Ask instructor a question...</text>
+  </g>
+</svg>

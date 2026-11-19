@@ -35,8 +35,8 @@ const Chatbot = () => {
       const knowledgeBase = {
         about: "Thomas is a passionate Software Engineer focused on AI, ML, Cloud Computing, and Full-Stack Web Development. He has strong problem-solving skills and loves turning complex problems into elegant, real-world solutions.",
         skills: "His tech stack includes JavaScript, TypeScript, C, C++, Python, PHP, React, Next.js, Node.js, Express, PostgreSQL, MySQL, MongoDB, Supabase, Tailwind CSS, Docker, and Git.",
-        experience: "Thomas is the Co-Founder of Gohyred (Aug 2026 - Present), leading product development and architecture. He is also a Core Team Member at The Elites (Oct 2025 - Present), previously served as a Sponsorship Team Member, contributed to GirlScript Summer of Code '25, and volunteered with HackwithIndia.",
-        projects: "Some of his featured projects include:\n- Gohyred: AI-powered career discovery and opportunity aggregation platform (Next.js/PostgreSQL/Redis).\n- Vibly Chat: Real-time encrypted chat application (PHP/WebSocket/Web Crypto).\n- Valenzy: Next-generation interactive chemistry & periodic table platform (React/Tailwind).\n- TRIC School Management: Complete school records and administrative system (PHP/MySQL).\n\nYou can ask me for the details or repository link of any specific project!",
+        experience: "Thomas is the Co-Founder of Gohyred (Aug 2026 - Present), leading product development and architecture. He previously worked as a Full Stack Developer at Nexvia Technologies (Oct 2026 - Nov 2026). He is also a Core Team Member at The Elites (Oct 2025 - Present), contributed to GirlScript Summer of Code '25, and volunteered with HackwithIndia.",
+        projects: "Some of his featured projects include:\n- Gohyred: AI-powered career discovery and opportunity aggregation platform (Next.js/PostgreSQL/Redis).\n- EduFlow Academy: Production-grade MERN LMS with real-time WebRTC virtual classrooms and SHA-256 verifiable certifications.\n- AgilePlatform: Enterprise-grade multi-tenant SaaS project management platform (Python/Django/React/PostgreSQL/Celery/Stripe).\n- Vibly Chat: Real-time encrypted chat application (PHP/WebSocket/Web Crypto).\n\nYou can ask me for the details or repository link of any specific project!",
         contact: "You can reach Thomas at thomasramesh449@gmail.com.\n\nHere are his important links:\n- GitHub: https://github.com/thomas2570\n- LinkedIn: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/\n- Twitter: https://x.com/thomasramesh200",
         linkedin: "Here is Thomas's LinkedIn profile: https://www.linkedin.com/in/thomas-ramesh-3ab96a2a2/",
         twitter: "Here is Thomas's Twitter profile: https://x.com/thomasramesh200",
@@ -45,6 +45,8 @@ const Chatbot = () => {
         resume: "Thomas's resume is available on Google Drive! You can view or download it here: https://drive.google.com/file/d/1LYUT-8Dgk1KMxlYKOcQttBFqk31UV2v6/view?usp=sharing — or reach out at thomasramesh449@gmail.com",
         greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him.",
         repo_gohyred: "Gohyred is an AI-powered career discovery and opportunity aggregation platform co-founded by Thomas. Explore it live: https://www.gohyred.com",
+        repo_eduflow: "Here is the repository link for EduFlow Academy: https://github.com/thomas2570/fullstack-internship-projects/tree/main/FS-03\n\nLive Demo: https://eduflowacademy.vercel.app\nIt is a modern MERN-stack LMS featuring WebRTC real-time virtual classrooms, adaptive learning, and SHA-256 verifiable certifications.",
+        repo_agileplatform: "Here is the repository link for AgilePlatform: https://github.com/thomas2570/fullstack-internship-projects/tree/main/FS-04\n\nLive Platform: https://agileplatform-snowy.vercel.app/\nIt is an enterprise-grade multi-tenant SaaS project management platform built with Python, Django, React, PostgreSQL, Celery, and Stripe.",
         repo_vibly: "Here is the repository link for Vibly Chat: https://github.com/thomas2570/vibly-chat\n\nLive Demo: https://vibly-chat.vercel.app/\nIt is a real-time messaging application built with PHP, WebSockets, and Web Crypto E2E encryption.",
         repo_valenzy: "Here is the repository link for Valenzy (formerly ZPeriod): https://github.com/thomas2570/Valenzy\n\nLive Platform: https://valenzy.vercel.app/\nIt's an interactive chemistry platform featuring 118 detailed elements, 3D atomic structures, chemical equation balancing, and molar mass calculators.",
         repo_profix: "Here is the repository link for ProFix: https://github.com/thomas2570/ProFix\n\nIt is a comprehensive service booking platform built with React, Node.js, and TailwindCSS.",
@@ -56,6 +58,10 @@ const Chatbot = () => {
 
       if (isMatch(['gohyred', 'gohyred.com'])) {
         botReply = knowledgeBase.repo_gohyred;
+      } else if (isMatch(['eduflow', 'eduflowacademy', 'lms', 'webrtc'])) {
+        botReply = knowledgeBase.repo_eduflow;
+      } else if (isMatch(['agileplatform', 'agile', 'saas', 'kanban', 'django'])) {
+        botReply = knowledgeBase.repo_agileplatform;
       } else if (isMatch(['vibly'])) {
         botReply = knowledgeBase.repo_vibly;
       } else if (isMatch(['valenzy', 'zperiod', 'period', 'periodic', 'chemistry'])) {
@@ -78,9 +84,9 @@ const Chatbot = () => {
         botReply = knowledgeBase.repo_general;
       } else if (isMatch(['contact', 'hire', 'reach', 'connect', 'message', 'phone', 'number', 'details'])) {
         botReply = knowledgeBase.contact;
-      } else if (isMatch(['experience', 'job', 'jobs', 'intern', 'internship', 'role', 'history', 'worked', 'elites', 'hackwithindia', 'girlscript', 'founder'])) {
+      } else if (isMatch(['experience', 'job', 'jobs', 'intern', 'internship', 'role', 'history', 'worked', 'nexvia', 'elites', 'hackwithindia', 'girlscript', 'founder'])) {
         botReply = knowledgeBase.experience;
-      } else if (isMatch(['project', 'projects', 'work', 'works', 'portfolio', 'build', 'built', 'made', 'created', 'gohyred', 'vibly', 'valenzy', 'profix', 'zperiod', 'tric'])) {
+      } else if (isMatch(['project', 'projects', 'work', 'works', 'portfolio', 'build', 'built', 'made', 'created', 'gohyred', 'eduflow', 'agileplatform', 'vibly', 'valenzy', 'profix', 'zperiod', 'tric'])) {
         botReply = knowledgeBase.projects;
       } else if (isMatch(['skill', 'skills', 'tech', 'stack', 'technologies', 'tools', 'languages', 'know', 'java', 'typescript', 'react', 'node', 'python', 'php', 'postgres'])) {
         botReply = knowledgeBase.skills;

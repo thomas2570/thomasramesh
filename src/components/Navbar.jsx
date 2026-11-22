@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
           
           <a 
-            href="https://drive.google.com/file/d/1Bk2s3Ht-nbZvYLCHsA2kyK3ph1MoGLUF/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1Gx7wulLh_KZFBE_BZU-XEYLOpSQx2h6d/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer" 
             className="text-[14px] font-medium text-gray-300 hover:text-white transition-colors"

@@ -42,7 +42,7 @@ const Chatbot = () => {
         twitter: "Here is Thomas's Twitter profile: https://x.com/thomasramesh200",
         github: "Here is Thomas's GitHub profile: https://github.com/thomas2570",
         email: "You can email Thomas directly at thomasramesh449@gmail.com",
-        resume: "Thomas's resume is available on Google Drive! You can view or download it here: https://drive.google.com/file/d/1Bk2s3Ht-nbZvYLCHsA2kyK3ph1MoGLUF/view?usp=sharing — or reach out at thomasramesh449@gmail.com",
+        resume: "Thomas's resume is available on Google Drive! You can view or download it here: https://drive.google.com/file/d/1Gx7wulLh_KZFBE_BZU-XEYLOpSQx2h6d/view?usp=sharing — or reach out at thomasramesh449@gmail.com",
         greetings: "Hi there! I'm Thomas's AI assistant. You can ask me about his skills, projects, experience, or how to contact him.",
         repo_gohyred: "Gohyred is an AI-powered career discovery and opportunity aggregation platform co-founded by Thomas. Explore it live: https://www.gohyred.com",
         repo_eduflow: "Here is the repository link for EduFlow Academy: https://github.com/thomas2570/fullstack-internship-projects/tree/main/FS-03\n\nLive Demo: https://eduflowacademy.vercel.app\nIt is a modern MERN-stack LMS featuring WebRTC real-time virtual classrooms, adaptive learning, and SHA-256 verifiable certifications.",
